@@ -1,0 +1,23 @@
+.Centercontainer{
+    position: relative;
+    height: 100%;
+}
+
+.Modal{
+    
+        background-color:whitesmoke;
+        width: 50%;
+        height: 75%;
+        margin: auto;
+        position: absolute;
+        align-items: center;
+        top: 0; left: 0; bottom: 0; right: 0;
+        border: 1px solid #ccc;
+        padding: 16px;
+        box-sizing: border-box;
+        box-shadow: 1px 1px black;
+        z-index: 100;
+        border-radius: 5%;
+}
+
+

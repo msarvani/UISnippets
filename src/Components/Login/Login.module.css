@@ -1,0 +1,16 @@
+.Checkbox{
+    float: left;
+    padding:20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ForgotPass{
+    float: right;
+    padding:20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.SignUp{
+    font-family: 'Times New Roman', Times, serif;
+    float: center;
+}

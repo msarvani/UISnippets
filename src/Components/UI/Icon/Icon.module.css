@@ -1,0 +1,40 @@
+.Icon{
+    box-sizing: border-box;
+}
+
+.Google{
+    position: relative;
+    bottom : 38px;
+    right: 100px;
+}
+
+.Facebook{
+    position: relative;
+    bottom : 38px;
+    right: 100px;
+}
+
+.Email {
+    position: relative;
+    bottom : 38px;
+    left: 350px;
+}
+
+.Password{
+    position: relative;
+    bottom : 38px;
+    left: 350px;
+}
+
+.User{
+    position: relative;
+    bottom : 38px;
+    left: 350px;
+}
+
+.Close{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 48%;
+}
