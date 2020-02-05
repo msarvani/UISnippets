@@ -27,15 +27,7 @@ const Input = (props) => {
                     );
             }     
         break;
-
-        case 'select':
-            inputElement = (
-                <div>
-                    
-                </div>
-            );
-        break;
-        
+                
         default:
             return 'some default string';
     }
