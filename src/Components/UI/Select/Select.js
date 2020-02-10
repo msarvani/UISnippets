@@ -1,50 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import classes from './Select.module.css';
 
+const Select =  (props) => {
+
+   const propsArray = Object.values(props);
+    const items = propsArray.map((item) =>
+                <option value={item.Value}>{item.label}</option>
+        )
 
 
-const Select = () => {
-    //  let updatedProps = {...props};
-    let value = null;
-    let label = null;
-
-    let items = [
-        {label: 'sarvani'},
-        {label: 'Rakesh'},
-        {label: 'Rishik'},
-        {label: 'shri'}
-    ];
-
-
-    const first = Object.values(items[0]);
-    
-    console.log(first);
-    
-
-    
-    let itemsDisplay = null;
-
-    
-        // label= items[i].label; 
-        // value= items[i].Value;
-
-        const itemsAsLists =items.map((label) =>
-        <li key={label.Value}>{label.name}</li>
-    );
-        
-
-        
-
-       
-    
-    return (
-
-        <Auxiliary >
-            {itemsAsLists}
-        </Auxiliary>
+    return(
+        <Auxiliary>
+            <select defaultValue={props.default} key= {props.id} className={classes.Select}>
+                {items}
+            </select>
+    </Auxiliary>
     );
 }
-
-
 export default Select;

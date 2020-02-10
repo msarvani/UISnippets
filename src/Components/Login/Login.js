@@ -7,7 +7,10 @@ import { NavLink } from 'react-router-dom';
 import Modal from '../UI/Modal/Modal';
 import classes from './Login.module.css';
 import Icon from '../UI/Icon/Icon';
-
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Register from '../Register/Register';
+import Navigation from '../Navigation/Navigation';
+import PhoneInput from 'react-phone-number-input';
 
 class Login extends Component {
     state = {
@@ -35,7 +38,20 @@ class Login extends Component {
         }
     }
 
+
+
+
+    redirectSignUp = () => {
+        this.props.history.push('/register');
+    }
+       
     render() {
+
+        let routes = (
+            <Switch>
+                <Route path="/register" component={Register}/>
+            </Switch>
+          );
 
         //create an array from controls Object
         const inputElementsArray = [];
@@ -76,10 +92,21 @@ class Login extends Component {
                     </div>
 
                     <div className={classes.ForgotPass}>
-                        <NavLink to="#" >Forgot password?</NavLink>
+                        <Navigation  link="/forgotpassword">Forgot password?</Navigation>
                     </div>
 
+                    <br/>
+                    <br/>
+                    <br/>
 
+                    <div className={classes.Checkbox1}>
+                        <input type="checkbox" /><Span> Keep me signed in on this computer</Span>
+                    </div>
+
+                    <br/>
+                    <div>
+                        <span className={classes.TermsLink}> By clicking an option below, I agree to the <NavLink to="/termsofservice">Terms of Use</NavLink> and have read the <NavLink to="/privacypolicy">Privacy Statement</NavLink>.</span>
+                    </div>
 
                     <div>
                         <Button btnType="Danger">Log in</Button>
@@ -88,7 +115,7 @@ class Login extends Component {
                     <hr />
                     <div className={classes.SignUp}>
                         <Span>Don't have an account?</Span>
-                        <NavLink to="#">Sign Up</NavLink>
+                        <Navigation  link="/register">SignUp</Navigation>
                     </div>
                 </Modal>
             </Auxiliary>

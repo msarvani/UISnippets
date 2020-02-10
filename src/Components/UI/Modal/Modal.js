@@ -8,11 +8,12 @@ class Modal extends Component{
         return(
             <Auxiliary className = {classes.Centercontainer}>
 
-                <Backdrop></Backdrop>
+                <Backdrop/>
                     <div className={classes.Modal}>
                         {this.props.children}
                         
                     </div>
+                
             </Auxiliary>
         );
     }

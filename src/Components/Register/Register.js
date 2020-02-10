@@ -3,8 +3,10 @@ import Input from '../UI/Input/Input';
 import Auxiliary from '../hoc/Auxiliary/Auxiliary';
 import Modal from '../UI/Modal/Modal';
 import Button from '../UI/Button/Button';
-import { NavLink } from 'react-router-dom';
 import classes from './Register.module.css';
+import DropDownDate from '../UI/DropDownDate/DropDownDate';
+import Icon from '../UI/Icon/Icon';
+import Navigation from '../Navigation/Navigation';
 
 class Register extends Component {
 
@@ -19,7 +21,6 @@ class Register extends Component {
                     placeholder: 'Email',
                     iconType: 'Email'
                 }
-
             },
 
             firstName: {
@@ -41,6 +42,18 @@ class Register extends Component {
                     iconType: 'User'
                 }
             },
+
+            phoneNumber: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'phone',
+                    name: 'Phone Number',
+                    placeholder: 'Phone Number',
+                    iconType: 'Phone'
+                }
+            },
+
+
 
             createPassword: {
                 elementType: 'input',
@@ -83,20 +96,32 @@ class Register extends Component {
 
         return (
             <Modal>
+
+                <div>
+                    <Icon iconType="Close" />
+                </div>
+
                 <Auxiliary>
                     {registerElements}
-                    <Button btnType="Danger">Sign Up</Button>
                 </Auxiliary>
 
                 <div>
-                    <hr/>
+                    <DropDownDate />
                 </div>
 
                 <div>
-                    <span className = {classes.fontfamily}>Already had an account?</span>
-                    <NavLink to="#">Sign In</NavLink>
+                    <Button btnType="Danger">Sign Up</Button>
                 </div>
-             </Modal>
+
+                <div>
+                    <hr />
+                </div>
+
+                <div>
+                    <span className={classes.fontfamily}>Already had an account?</span>
+                    <Navigation  link="/login">Sign In</Navigation>
+                </div>
+            </Modal>
         );
     }
 }

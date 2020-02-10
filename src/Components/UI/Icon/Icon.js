@@ -2,6 +2,8 @@ import React from 'react';
 import { MdEmail } from 'react-icons/md';
 import { FaGoogle, FaFacebookF, FaLock, FaUserAlt } from "react-icons/fa";
 import { IoIosCloseCircle } from "react-icons/io";
+import { MdLocalPhone, MdCopyright } from 'react-icons/md';
+import { TiSocialInstagram, TiSocialTwitter, TiSocialFacebook } from "react-icons/ti";
 import classes from './Icon.module.css';
 
 const Icon = (props) =>{
@@ -25,6 +27,18 @@ switch(props.iconType){
             icon = <FaFacebookF className = {iconClasses}/>
     break;
 
+    case 'FacebookSocial':
+            icon = <TiSocialFacebook className = {iconClasses}/>
+    break;
+
+    case 'Instagram':
+            icon = <TiSocialInstagram className = {iconClasses}/>
+    break;
+
+    case 'Twitter':
+            icon = <TiSocialTwitter className = {iconClasses}/>
+    break;
+
     case 'Close':
             icon = <IoIosCloseCircle className = {iconClasses}/>
     break;
@@ -32,6 +46,14 @@ switch(props.iconType){
     case 'User':
             icon = <FaUserAlt className = {iconClasses}/>
     break;
+
+    case 'Phone':
+        icon = <MdLocalPhone className = {iconClasses}/>
+        break;
+
+    case 'copyright' :
+        icon = <MdCopyright className = {iconClasses}/>
+        break; 
     
     default: 
         return 'some string';

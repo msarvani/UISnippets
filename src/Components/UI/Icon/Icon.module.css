@@ -26,6 +26,12 @@
     left: 350px;
 }
 
+.Phone{
+    position: relative;
+    bottom : 38px;
+    left: 350px;
+}
+
 .User{
     position: relative;
     bottom : 38px;
@@ -38,3 +44,4 @@
     position: relative;
     left: 48%;
 }
+

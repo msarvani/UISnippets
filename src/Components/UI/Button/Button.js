@@ -16,9 +16,10 @@ const Button = (props) => {
             <Icon iconType={props.iconType}/>
             </Auxiliary>
         )       
-    }else{
+    }else 
+    {
         createButton = (
-            <button className = {[classes.Button, classes[props.btnType]].join(' ')}>
+            <button className = {[classes.Button, classes[props.btnType]].join(' ')} onClick={props.operation}>
                 {props.children}
             </button>
         );
